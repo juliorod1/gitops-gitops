@@ -19,7 +19,7 @@ pipeline {
     stage ('Apply resources') {
       when {
         branch 'main'
-      }    
+      }
       steps {
         sh 'oc apply -k config'
         sh './wait_oauth.sh'
